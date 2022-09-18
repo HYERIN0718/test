@@ -40,7 +40,7 @@ pipeline { // 파이프라인을 stage별로 나눠서 명시함, 흐름을 파�
             steps{
                 sshagent(credentials : ["deploy-key"]) { // 젠킨스에 접속하기 위한 key
                     sh "ssh -o StrictHostKeyChecking=no ubuntu@${deployHost} \
-                     'aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${ecrUrl}/${repository};
+                     'aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${ecrUrl}/${repository}; \
                       docker run -d -p 80:8080 -t ${ecrUrl}/${repository}:${currentBuild.number};'"
                 }
             }
