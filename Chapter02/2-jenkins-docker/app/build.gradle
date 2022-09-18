@@ -36,7 +36,7 @@ test {
 
 jib {
   from {
-    image = 'adoptopenjdk/openjdk11:alpine-jre'
+    image = 'openjdk@sha256:fb54ed3516242995d86c53346463a3509f9baf74a9178c066bdbcc5c1bdafc66'
   }
 	container {
     // entrypoint = ['java', '-Dspring.profiles.active=test', '-jar', 'test-docker-spring-boot-0.0.1-SNAPSHOT.jar']
