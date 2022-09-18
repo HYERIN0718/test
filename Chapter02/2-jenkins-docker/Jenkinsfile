@@ -1,6 +1,6 @@
 def mainDir="Chapter02/2-jenkins-docker" 
 def ecrLoginHelper="docker-credential-ecr-login" 
-def region="us-east-1" // 사용하는 리전
+def region="us-east-1"
 def ecrUrl="436115905187.dkr.ecr.us-east-1.amazonaws.com/test" 
 def repository="test" 
 def deployHost="172.31.81.217" 
